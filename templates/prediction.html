@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+<h1>Prediction</h1>
+
+
+<div>
+
+<form action="{{ url_for('prediction')}}" method = 'post'>
+
+  <dl>
+  	<dt>Prediction:</dt>
+              <dt>sepal length:</dt>
+                          <dd><input type = 'text' size = '8' name='sepallength' required></dd>
+              <dt>sepal width:</dt>
+                          <dd><input type = 'text' size = '8' name='sepalwidth' required></dd>
+              <dt>petal length:</dt>
+                          <dd><input type = 'text' size = '8' name='petallength' required></dd>
+              <dt>petal width:</dt>
+                          <dd><input type = 'text' size = '8' name='petalwidth' required></dd>
+  </dl>
+
+
+  <input type='submit' value='Create'>
+
+</div>
+
+</body>
+
+</html>
