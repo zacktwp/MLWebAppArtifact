@@ -18,7 +18,8 @@ import io
 app = Flask(__name__)
 
 
-engine = create_engine('sqlite:///iris.db')
+#engine = create_engine('sqlite:///iris.db')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)

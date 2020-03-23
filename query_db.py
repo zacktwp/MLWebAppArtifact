@@ -2,7 +2,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database import Base, Polution, User
 
-engine = create_engine('sqlite:///polution.db')
+#engine = create_engine('sqlite:///polution.db')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind=engine
 DBSession = sessionmaker(bind = engine)
 session = DBSession()
