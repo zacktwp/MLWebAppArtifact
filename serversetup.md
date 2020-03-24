@@ -1,4 +1,4 @@
-# Log into ec2 and run the below commands
+# Log into ec2 and run the below commands:
 
 `sudo apt-get update`
 
@@ -65,7 +65,7 @@ from mlwebapp import app as application
 
 `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
 
-# copy code below and past in the conf file and past in the ip address of the ec2 instance for mywbsite.com
+### copy code below and past in the conf file and past in the ip address of the ec2 instance for mywbsite.com
 
 ```
 <VirtualHost *:80>
@@ -99,7 +99,7 @@ from mlwebapp import app as application
 
 ### go to the ip address in the browser and begin interacting with your website
 
-### error logs if something goes wrong
+### error logs if something goes wrong within ec2
 
 `sudo nano /var/log/apache2/error.log`
 
