@@ -1,4 +1,4 @@
-# Log into ec2 and run the below commands:
+### Log into ec2 and run the below commands:
 
 `sudo apt-get update`
 
@@ -48,7 +48,7 @@ Make sure you change the SageMaker endpoint to the one you created within the __
 
 `cd /var/www/`
 
-### Create wsgi file and past code
+### Create wsgi file under the /var/www/ directory
 
 `sudo nano flaskapp.wsgi`
 
@@ -63,11 +63,11 @@ sys.path.insert(0,"/var/www/")
 from mlwebapp import app as application
 ```
 
-### Create the conf payload_file
+### Create the conf file
 
 `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
 
-### copy code below and past in the conf file and past in the ip address of the ec2 instance for mywbsite.com
+### copy code below and past in the conf file. Also be sure to past in the ip address of the ec2 instance in place of mywbsite.com
 
 ```
 <VirtualHost *:80>
@@ -87,7 +87,7 @@ from mlwebapp import app as application
 </VirtualHost>
 ```
 
-### run the below commands
+### Run the below commands
 
 `sudo a2dissite 000-default.conf`
 
